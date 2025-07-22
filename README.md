@@ -5,7 +5,7 @@ This project demonstrates a comprehensive data warehousing and analytics solutio
 
 ---
 
-## Project Requirements
+## 🗓️ Project Requirements
 
 ### Building the Data Warehouse (Data Engineering)
 
@@ -21,7 +21,7 @@ Develop a modern data warehouse using MySQL Workbench to consolidate sales data,
 
 ----
 
-### BI: Analytics & Reporting (Data Analytics)
+### 📊 BI: Analytics & Reporting (Data Analytics)
 
 #### Objective  
 Develop SQL-based analytics to deliver detailed insights into:  
@@ -35,6 +35,6 @@ These insights empower stakeholders with key business metrics, enabling strategi
 
 This project is licensed under the [MIT License](License). You are free to use, modify and share this project with proper attribution.
 
-## About Me
+## 🤵‍♂️ About Me
 
 Hi there! I'm **Beimnet Tefera**, an electrical engineer and data scientist who’s passionate about turning data into insights that drive meaningful outcomes. I love sharing what I know, learning what I don’t, and staying curious about the stories hidden in data. Let’s connect through the power of analytics!
