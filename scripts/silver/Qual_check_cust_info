@@ -1,9 +1,9 @@
--- Check For Bulls or Duplicates in Primary Key
 /*
 ----------------------------------------------------
 For crm_cust_info table
 ----------------------------------------------------
 */
+-- Check For Bulls or Duplicates in Primary Key
 -- Expectation: No Result
 SELECT 
     cst_id,
