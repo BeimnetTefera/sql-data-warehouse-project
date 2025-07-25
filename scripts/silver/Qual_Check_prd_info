@@ -1,3 +1,9 @@
+/*
+----------------------------------------------------
+For crm_prd_info
+----------------------------------------------------
+*/
+
 -- Check For Nulls or Duplicate in Primary Key
 -- Expectation: No Result
 
