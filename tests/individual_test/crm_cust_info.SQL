@@ -1,0 +1,38 @@
+
+/*
+----------------------------------------------------
+For crm_cust_info table
+----------------------------------------------------
+*/
+-- Check For Bulls or Duplicates in Primary Key
+-- Expectation: No Result
+SELECT 
+    cst_id,
+    count(*)
+FROM bronze.crm_cust_info
+GROUP BY cst_id
+HAVING count(*) > 1 OR cst_id IS NULL;
+
+-- Check for Unwanted Spaces for FirstName
+SELECT cst_firstname
+FROM bronze.crm_cust_info
+WHERE crm_firstname != TRIM(crm_firstname);
+
+-- Check for Unwanted Spaces for LastName
+SELECT cst_lastname
+FROM bronze.crm_cust_info
+WHERE crm_lastname != TRIM(crm_lastname);
+
+-- Data Standardaizationn & Consistency for cst_gndr table
+SELECT DISTINCT cst_gndr
+FROM bronze.crm_cust_info
+
+-- Data Standardaizationn & Consistency for cst_martial_status table
+SELECT DISTINCT cst_martial_status
+FROM bronze.crm_cust_info
+
+/*
+----------------------------------------------------
+For crm_prd_info table
+----------------------------------------------------
+*/
