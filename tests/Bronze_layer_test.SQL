@@ -77,35 +77,20 @@ For crm_prd_info
 
 /*
 ----------------------------------------------------
-For crm_sls_ord_num
+For crm_sales.details
 ----------------------------------------------------
 */
 -- Check for extra spaces in 'sls_ord_num'
     SELECT
-        sls_ord_num,
-        sls_prd_key,
-        sls_cust_id,
-        sls_order_dt,
-        sls_ship_dt,
-        sls_due_dt,
-        sls_sales,
-        sls_quantity,
-        sls_price
+        sls_ord_num
     FROM
         bronze.crm_sales.details
     WHERE sls_ord_num != TRIM(sls_ord_num);
 
 -- Check if all 'sls_prd_key' values exist in the related product info table
     SELECT
-        sls_ord_num,
-        sls_prd_key,
-        sls_cust_id,
-        sls_order_dt,
-        sls_ship_dt,
-        sls_due_dt,
-        sls_sales,
-        sls_quantity,
-        sls_price
+        sls_prd_key
+
     FROM
         bronze.crm_sales.details
     WHERE 
@@ -116,15 +101,8 @@ For crm_sls_ord_num
 -- Check if all 'sls_cust_id' values exist in the customer info table,
 -- as we will later join both tables using this key
     SELECT
-        sls_ord_num,
-        sls_prd_key,
-        sls_cust_id,
-        sls_order_dt,
-        sls_ship_dt,
-        sls_due_dt,
-        sls_sales,
-        sls_quantity,
-        sls_price
+        sls_cust_id
+
     FROM
         bronze.crm_sales.details
     WHERE 
