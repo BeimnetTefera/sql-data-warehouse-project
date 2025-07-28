@@ -1,0 +1,31 @@
+
+PRINT 'Truncating Table: silver.erp_cust_az12 ';
+TRUNCATE TABLE silver.erp_cust_az12 ;
+
+PRINT 'Inserting Data Into: silver.erp_cust_az12 ';
+INSERT INTO silver.erp_cust_az12 (
+    cid,
+    bdate,
+    gen
+)
+SELECT
+    CASE
+        WHEN cid LIKE 'NAS%' 
+        THEN SUBSTRING(cid, 4, LEN(cid)) -- Since the value has extra characters at the beginning, we extract from the 4th character to the end. 
+                                         -- We use LEN() to make it dynamic since the total length may vary.
+        ELSE cid
+    END AS cid,
+
+    CASE
+        WHEN bdate > GETDATE() -- The birthdate should not exceed the current date, so if it does, we replace it with NULL
+        THEN NULL
+        ELSE bdate
+    END AS bdate,
+
+    CASE
+        WHEN UPPER(TRIM(gen)) IN ('F', 'FEMALE') THEN 'Female'
+        WHEN UPPER(TRIM(gen)) IN ('M', 'MALE') THEN 'Male'
+        ELSE 'N/A'
+    END AS gen -- Normalize Gender values, Handle Unkown Case
+
+FROM bronze.erp_cust_az12;
