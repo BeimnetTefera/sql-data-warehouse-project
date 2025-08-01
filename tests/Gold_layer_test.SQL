@@ -1,5 +1,5 @@
 -----------------------------------------------------------------------
-            Customer Table
+                         -- Customer Table
 -----------------------------------------------------------------------
 
 -- Check if cst_id have duplicates
@@ -44,7 +44,7 @@ LEFT JOIN silver.erp_loc_a101 AS la
 ON ci.cst_key = la.cid;
 
 -----------------------------------------------------------------------
-                            Product Table
+                           -- Product Table
 -----------------------------------------------------------------------
 
 -- Check if the product key is not duplicated
@@ -70,6 +70,17 @@ SELECT prd_key, COUNT(*) FROM
     HAVING COUNT(*) > 1;
 
 -----------------------------------------------------------------------
-                            Sales Table
+                            -- Sales Table
 -----------------------------------------------------------------------
+
+-- Check the data model connectivity between fact and dimensions
+
+SELECT *
+FROM gold.fact_sales As f 
+LEFT JOIN gold.dim_customers AS c 
+ON c.customer_key = f.customer_key
+LEFT JOIN gold.dim_products AS p
+ON  p.product_key = f.product_key
+WHERE c.customer_key IS NULL OR p.product_key IS  NULL;
+
 
