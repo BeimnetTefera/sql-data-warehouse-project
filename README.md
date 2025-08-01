@@ -61,3 +61,4 @@ This project is licensed under the [MIT License](License). You are free to use, 
 ## 🤵‍♂️ About Me
 ---
 Hi there! I'm **Beimnet Tefera**, an electrical engineer and data scientist who’s passionate about turning data into insights that drive meaningful outcomes. I love sharing what I know, learning what I don’t, and staying curious about the stories hidden in data. Let’s connect through the power of analytics!
+---
