@@ -15,7 +15,7 @@ The data architecture for this project follows **Medallion Architecture** Bronze
 1. Bronze Layer: Stores raw data as-is from the source systems. Data is ingested from CSV Files into SQL Server Database.
 2. Silver Layer: This layer includes data cleansing, standardization, and normalization processes to prepare data for analysis.
 3. Gold Layer: Houses business-ready data modeled into a star schema required for reporting and analytics.
-## Project Overview
+## 📖 Project Overview
 ---
 This project involves:
 
@@ -23,6 +23,11 @@ This project involves:
   2. ETL Pipelines: Extracting, transforming, and loading data from source systems into the warehouse.
   3. Data Modeling: Developing fact and dimension tables optimized for analytical queries.
   4. Analytics & Reporting: Creating SQL-based reports and dashboards for actionable insights.
+  5. 
+# 🛠️ Important Tools:
+---
+   SQL Server Express: Lightweight server for hosting your SQL database.
+   SQL Server Management Studio (SSMS): GUI for managing and interacting with databases.
      
 ## 🗓️ Project Requirements
 
@@ -42,7 +47,8 @@ Develop a modern data warehouse using MySQL Workbench to consolidate sales data,
 
 ### 📊 BI: Analytics & Reporting (Data Analytics)
 
-#### Objective  
+#### Objective 
+---
 Develop SQL-based analytics to deliver detailed insights into:  
 - **Customer Behavior**  
 - **Product Performance**  
@@ -51,9 +57,10 @@ Develop SQL-based analytics to deliver detailed insights into:
 These insights empower stakeholders with key business metrics, enabling strategic decision-making.
 
 ## 🪪 License  
+---
 
 This project is licensed under the [MIT License](License). You are free to use, modify and share this project with proper attribution.
 
 ## 🤵‍♂️ About Me
-
+---
 Hi there! I'm **Beimnet Tefera**, an electrical engineer and data scientist who’s passionate about turning data into insights that drive meaningful outcomes. I love sharing what I know, learning what I don’t, and staying curious about the stories hidden in data. Let’s connect through the power of analytics!
