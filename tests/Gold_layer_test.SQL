@@ -1,3 +1,20 @@
+/*
+******************************************************************************
+                        Quality Checks
+******************************************************************************
+Script Purpose:
+  - This script performs quality checks to validate the integrity, consistency, 
+  and accuracy of surrogate keys in dimenstion tables.
+  - Uniqeness of surrogate keys in the dimension tables.
+  - Referential integrity between fact and dimenstion tables.
+  - Validations of relationships in the data model for analaytical purposses.
+
+Usage Notes:
+  - Run these checks after data loading silver layer.
+  - Investigate and resolve any discripancies found during checks.
+******************************************************************************
+*/
+
 -----------------------------------------------------------------------
                          -- Customer Table
 -----------------------------------------------------------------------
@@ -82,5 +99,3 @@ ON c.customer_key = f.customer_key
 LEFT JOIN gold.dim_products AS p
 ON  p.product_key = f.product_key
 WHERE c.customer_key IS NULL OR p.product_key IS  NULL;
-
-
