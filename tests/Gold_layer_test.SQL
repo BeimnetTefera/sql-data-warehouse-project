@@ -20,6 +20,7 @@ Usage Notes:
 -----------------------------------------------------------------------
 
 -- Check if cst_id have duplicates
+-- Expectation: No Results
 
 SELECT cst_id, COUNT(*) FROM
     (
@@ -65,6 +66,8 @@ ON ci.cst_key = la.cid;
 -----------------------------------------------------------------------
 
 -- Check if the product key is not duplicated
+-- Expectations: No Results
+
 SELECT prd_key, COUNT(*) FROM
     (
         SELECT
