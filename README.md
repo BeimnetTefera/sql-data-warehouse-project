@@ -25,6 +25,7 @@ This project involves:
 # 🛠️ Important Tools:
 
    SQL Server Express: Lightweight server for hosting your SQL database.
+   
    SQL Server Management Studio (SSMS): GUI for managing and interacting with databases.
      
 ## 🗓️ Project Requirements
